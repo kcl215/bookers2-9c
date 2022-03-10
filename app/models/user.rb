@@ -9,7 +9,8 @@ class User < ApplicationRecord
   has_many :favorites, dependent: :destroy
   # グループ機能　userはgroup_usersテーブルを介してgroupsテーブルと繋がれる
   has_many :group_users
-  has_many :groups, through: :group_users
+  has_many :groups, through: :group_users, dependent: :destroy
+  has_many :owned_groups, class_name: "Group"
 
   # 自分がフォローされる（被フォロー）側の関係性
   has_many :reverse_of_relationships, class_name: "Relationship", foreign_key: "followed_id", dependent: :destroy

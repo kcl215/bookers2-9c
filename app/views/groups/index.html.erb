@@ -17,6 +17,9 @@
               <td><%= group.introduction %></td>
               <td><%= group.users.length %></td>
               <td>
+                <%= group.user ? group.user.name : "不明" %>が作成
+              </td>
+              <td>
                 <% if group.owner_id == current_user.id %>
                   <%= link_to 'Edit', edit_group_path(group), class: "btn btn-sm btn-success" %>
                 <% end %>
