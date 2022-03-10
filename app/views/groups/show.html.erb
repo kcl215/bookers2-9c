@@ -42,6 +42,8 @@
             <%= link_to 'グループ削除',group_all_destroy_path(@group), method: :delete,data: { confirm: '本当に削除しますか？' }, class: "btn btn-sm btn-outline-danger" %>
             <% end %>
             </td>
+                        <td><%= link_to 'Mail',group_new_mail_path(@group), class: "btn btn-success" %></td>
+
           </tr>
         </tbody>
       </table>
