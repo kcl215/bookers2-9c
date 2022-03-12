@@ -83,7 +83,7 @@ Rails.application.configure do
     address:              'smtp.gmail.com',
     domain:               'gmail.com',
     user_name:            'kcl988780@gmail.com',#Gmailのアドレス
-    password:             'dpxiesjzmawpnikc',#後述！大苦戦しました！
+    password:             '',
     authentication:       'login',
     enable_starttls_auto: true
   }
